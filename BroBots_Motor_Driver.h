@@ -1,12 +1,12 @@
-#ifndef MotorDriver_h
-#define MotorDriver_h
+#ifndef BroBots_Motor_Driver_h
+#define BroBots_Motor_Driver_h
 
 #include "Arduino.h"
 
-class MotorDriver
+class BroBots_Motor_Driver
 {
   public:
-    MotorDriver(int ENA, int ENB, int INPins[4]);
+    BroBots_Motor_Driver(int ENA, int ENB, int INPins[4]);
     void begin();
     void spinForward(int motorSpeed);
     void spinBackwards(int motorSpeed);

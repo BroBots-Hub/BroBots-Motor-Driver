@@ -1,7 +1,7 @@
 #include "Arduino.h"
-#include "MotorDriver.h"
+#include "BroBots_Motor_Driver.h"
 
-MotorDriver::MotorDriver(int ENA, int ENB, int INPins[4])
+BroBots_Motor_Driver::BroBots_Motor_Driver(int ENA, int ENB, int INPins[4])
 {
   _ena = ENA;
   _enb = ENB;
@@ -12,7 +12,7 @@ MotorDriver::MotorDriver(int ENA, int ENB, int INPins[4])
   _motors[3] = INPins[3];
 }
 
-void MotorDriver::begin()
+void BroBots_Motor_Driver::begin()
 {
   pinMode(_ena, OUTPUT);
   pinMode(_enb, OUTPUT);
@@ -23,7 +23,7 @@ void MotorDriver::begin()
   }
 }
 
-void MotorDriver::spinForward(int motorSpeed)
+void BroBots_Motor_Driver::spinForward(int motorSpeed)
 {
   analogWrite(_ena, motorSpeed);
   analogWrite(_enb, motorSpeed);
@@ -33,7 +33,7 @@ void MotorDriver::spinForward(int motorSpeed)
   digitalWrite(_motors[3], HIGH);
 }
 
-void MotorDriver::spinBackwards(int motorSpeed)
+void BroBots_Motor_Driver::spinBackwards(int motorSpeed)
 {
   analogWrite(_ena, motorSpeed);
   analogWrite(_enb, motorSpeed);
@@ -43,7 +43,7 @@ void MotorDriver::spinBackwards(int motorSpeed)
   digitalWrite(_motors[3], LOW);
 }
 
-void MotorDriver::spinLeft(int motorSpeed) {
+void BroBots_Motor_Driver::spinLeft(int motorSpeed) {
   analogWrite(_ena, motorSpeed);
   analogWrite(_enb, motorSpeed);
   digitalWrite(_motors[0], LOW);
@@ -52,7 +52,7 @@ void MotorDriver::spinLeft(int motorSpeed) {
   digitalWrite(_motors[3], LOW);
 }
 
-void MotorDriver::turnLeft(int motorSpeed, int multiplier) {
+void BroBots_Motor_Driver::turnLeft(int motorSpeed, int multiplier) {
   analogWrite(_ena, motorSpeed);
   analogWrite(_enb, motorSpeed * multiplier);
   digitalWrite(_motors[0], LOW);
@@ -61,7 +61,7 @@ void MotorDriver::turnLeft(int motorSpeed, int multiplier) {
   digitalWrite(_motors[3], HIGH);
 }
 
-void MotorDriver::spinRight(int motorSpeed) {
+void BroBots_Motor_Driver::spinRight(int motorSpeed) {
   analogWrite(_ena, motorSpeed);
   analogWrite(_enb, motorSpeed);
   digitalWrite(_motors[0], HIGH);
@@ -70,7 +70,7 @@ void MotorDriver::spinRight(int motorSpeed) {
   digitalWrite(_motors[3], HIGH);
 }
 
-void MotorDriver::turnRight(int motorSpeed, int multiplier) {
+void BroBots_Motor_Driver::turnRight(int motorSpeed, int multiplier) {
   analogWrite(_ena, motorSpeed * multiplier);
   analogWrite(_enb, motorSpeed);
   digitalWrite(_motors[0], LOW);
@@ -79,7 +79,7 @@ void MotorDriver::turnRight(int motorSpeed, int multiplier) {
   digitalWrite(_motors[3], HIGH);
 }
 
-void MotorDriver::stopMotors()
+void BroBots_Motor_Driver::stopMotors()
 {
   analogWrite(_ena, 0);
   analogWrite(_enb, 0);
