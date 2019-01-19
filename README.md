@@ -1,4 +1,6 @@
 # BroBots Motor Driver Library
+![](https://img.shields.io/github/license/BroBots-Hub/BroBots-Motor-Driver.svg) ![](https://img.shields.io/github/issues/BroBots-Hub/BroBots-Motor-Driver.svg)
+
 Arduino library for L298N motor driver.
 ## Instalation
 To install library folow the instructions:
