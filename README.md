@@ -78,4 +78,5 @@ driver.spinRight(int motorSpeed);
 Main developer - [Andrew Yatsura (andrew4ever)](https://github.com/andrew4ever)
 
 # License
-MIT. Copyright
+MIT License
+Copyright (c) 2019 BroBots.Hub
