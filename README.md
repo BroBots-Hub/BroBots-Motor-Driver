@@ -18,9 +18,9 @@ Create driver instance:
 ```C++
 BroBots_Motor_Driver driver(int ENA, int ENB, int INPins[4]);
 ```
-- `int ENA` - ENA pin, must be PWM
-- `int ENB` - ENB pin, must be PWM
-- `int INPins[4]` - array of IN pins, `{IN1, IN2, IN3, IN4}`
+- `int ENA` - pin for **left motor's** speed, must be PWM
+- `int ENB` - pin for **right motor's** speed, must be PWM
+- `int INPins[4]` - all IN pins, `{IN1, IN2, IN3, IN4}`
 
 Begin driver's work:
 ```C++
