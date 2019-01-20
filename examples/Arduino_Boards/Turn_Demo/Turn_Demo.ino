@@ -13,14 +13,14 @@ void setup() {
 }
 
 void loop() {
-  // Spin all motors forward at max speed
-  driver.spinForward(255);
+  // Turn left |    Speed   Multiplier of speed for right motor
+  driver.turnLeft( 255 / 2,    2);
   delay(2000);
 
-  // Spin all motors backwards
-  driver.spinBackwards(150);
+  // Turn right |    Speed   Multiplier of speed for left motor
+  driver.turnRight( 255 / 2,    2);
   delay(2000);
-  
+
   // Stop all motors
   driver.stopMotors();
   delay(1000);
