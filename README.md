@@ -75,4 +75,3 @@ driver.spinRight(int motorSpeed);
 - `int motorSpeed` - motors speed from 0 to 255
 
 # Credits
-The only developer - @andrew4ever
